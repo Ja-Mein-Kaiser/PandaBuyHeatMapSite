@@ -24,7 +24,7 @@
         }).addTo(map);
 
         // Fetch your JSON data (replace 'data.json' with your file name)
-        fetch('output.json')
+        fetch('https://pandajsonstore.blob.core.windows.net/json/output.json')
             .then(response => response.json())
             .then(data => {
                 // Extract latitude and longitude data
