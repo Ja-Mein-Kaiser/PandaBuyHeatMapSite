@@ -24,11 +24,11 @@
         }).addTo(map);
 
         // Fetch your JSON data (replace 'data.json' with your file name)
-        fetch('https://pandajsonstore.blob.core.windows.net/json/output.json')
+        fetch('output.json')
             .then(response => response.json())
             .then(data => {
                 // Extract latitude and longitude data
-                var latlngs = data.map(entry => [entry.latitude, entry.longitude]);
+                var latlngs = data.map(entry => [entry.a, entry.o]);
 
                 // Create heatmap layer using Leaflet.heat
                 var heat = L.heatLayer(latlngs, { radius: 20 }).addTo(map);
