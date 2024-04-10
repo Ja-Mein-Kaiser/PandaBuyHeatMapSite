@@ -23,7 +23,7 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Fetch your JSON data (replace 'data.json' with your file name)
+        // Fetch JSON from azure blob storage
         fetch('https://pandajsonstore.blob.core.windows.net/json/output.json')
             .then(response => response.json())
             .then(data => {
